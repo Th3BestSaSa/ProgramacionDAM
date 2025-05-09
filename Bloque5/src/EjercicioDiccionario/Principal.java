@@ -19,25 +19,42 @@ public class Principal {
 	}
 
 	private static void tratarOpciones(int opc, Diccionario diccionario) {
-
+		String palabra, comienzo, significado;
+		
 		switch (opc) {
 		case 1:
-			String palabra;
-			String significado;
-			diccionario.annadirEntrada(palabra, significado);
-			System.out.println("Añadir la palabra");
-			palabra= teclado.nextLine();
-			System.out.println("Añadir la palabra");
+			palabra=teclado.nextLine();
 			significado=teclado.nextLine();
+			diccionario.annadirEntrada(palabra, significado);
 			break;
 		case 2:
+			
+			palabra = solicitarPalabra();
+			diccionario.buscarPalabra(palabra);
 			break;
 		case 3:
+			palabra = solicitarPalabra();
+			diccionario.borrarPalabra(palabra);
 			break;
 		case 4:
+			comienzo=solicitarPalabra();
+			System.out.println(diccionario.listadoPalabrasEmpiecenPor(comienzo));
 			break;
 		}
 		
+	}
+
+	/**
+	 * TODO Descripción del método.
+	 *
+	 * @author DAM1
+	 * @date 8 may 2025
+	 *
+	 * @return
+	 */
+	public static String solicitarPalabra() {
+	
+		return null;
 	}
 
 	private static int mostrarMenu() {

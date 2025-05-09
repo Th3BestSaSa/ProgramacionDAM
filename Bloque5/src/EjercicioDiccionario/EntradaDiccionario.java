@@ -1,6 +1,5 @@
 package EjercicioDiccionario;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 
@@ -12,7 +11,7 @@ public class EntradaDiccionario {
 	public EntradaDiccionario(String palabra, String significado) {
 		this.listaSignificados = new HashSet<String>();
 		this.palabra = palabra;
-//		this.significado=significado;
+		this.listaSignificados.add(significado);
 	}
 
 	/**
@@ -22,21 +21,16 @@ public class EntradaDiccionario {
 		return palabra;
 	}
 
-	/**
-	 * @return the listaSignificados
-	 */
-	public HashSet<String> getListaSignificados() {
-		return listaSignificados;
+
+	public void annadirSignificado(String significado) throws DiccionarioException {
+		
+		boolean añadido= listaSignificados.add(significado);
+		if(!añadido) {
+			throw new DiccionarioException ("Significado no añadido");
+		}
 	}
 
-	public void annadirSignificado(String significado) {
-
-	}
-
-	public void borrarPalabra(String palabra) {
-
-	}
-
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(palabra);
