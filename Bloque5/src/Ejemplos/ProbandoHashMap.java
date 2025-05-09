@@ -1,3 +1,4 @@
+package Ejemplos;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -25,7 +26,7 @@ public class ProbandoHashMap {
 		u=new Usuario("pepe3", "pepito3");
 		mapa.put("pepe3", u);
 		
-		// Obtener todos los elementos del HashMap en una colección
+		// Obtener todos los elementos del HashMap en una colecciï¿½n
 		Collection<Usuario> coleccion=mapa.values();
 		System.out.println("Listado");
 		for (Usuario usu: coleccion)
@@ -33,7 +34,7 @@ public class ProbandoHashMap {
 			System.out.println(usu);
 		}
 	
-		// Pasar la colección a ArrayList y ordenarlo
+		// Pasar la colecciï¿½n a ArrayList y ordenarlo
 		ArrayList<Usuario> array=new ArrayList<Usuario>( coleccion);
 		Collections.sort(array);
 		

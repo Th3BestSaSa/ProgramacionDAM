@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package Ejemplos;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -33,9 +33,9 @@ public class Ejemplo1ColeccionString {
 		else {
 			System.out.println("No está en la coleccion");
 		}
-		for (String string : conjuntoCiudades) {
-			
-		}
+//		for (String string : conjuntoCiudades) {
+//			
+//		}
 		conjuntoCiudades.remove("Sevilla");
 		//devuelve un boolean
 		

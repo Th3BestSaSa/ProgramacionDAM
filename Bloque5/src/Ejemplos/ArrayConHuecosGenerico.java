@@ -1,6 +1,7 @@
 /**
  * 
  */
+package Ejemplos;
 
 /**
  * TODO Descripción de la clase ArrayConHuecosGenerico.

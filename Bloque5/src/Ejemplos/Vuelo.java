@@ -1,3 +1,4 @@
+package Ejemplos;
 import java.util.Objects;
 
 public class Vuelo implements Comparable<Vuelo> 

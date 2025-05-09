@@ -1,14 +1,14 @@
+package Ejemplos;
 import java.util.Collection;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
-import java.util.Iterator;
+
 import java.util.LinkedList;
-import java.util.Scanner;
+
 
 public class CreandoUnaColeccionAPartirDeOtra {
-	private static Scanner teclado = new Scanner(System.in);
-
 	public static void main(String[] args) {
 		//Creamos un HashSet
 		HashSet<Persona> conjuntoPersonas = new HashSet<Persona>();
@@ -53,16 +53,16 @@ public class CreandoUnaColeccionAPartirDeOtra {
 
 	}
 
-	private static void mostrarColeccionUsandoIterador(HashSet<Persona> conjuntoPersonas) {
-		Iterator<Persona> iterador;
-		Persona persona;
-		iterador = conjuntoPersonas.iterator();
-
-		while (iterador.hasNext()) {
-			persona = iterador.next();
-			System.out.println(persona);
-		}
-	}
+//	private static void mostrarColeccionUsandoIterador(HashSet<Persona> conjuntoPersonas) {
+//		Iterator<Persona> iterador;
+//		Persona persona;
+//		iterador = conjuntoPersonas.iterator();
+//
+//		while (iterador.hasNext()) {
+//			persona = iterador.next();
+//			System.out.println(persona);
+//		}
+//	}
 
 
 
