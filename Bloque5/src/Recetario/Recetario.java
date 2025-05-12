@@ -1,6 +1,6 @@
 package Recetario;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class Recetario {
 
@@ -20,20 +20,42 @@ public class Recetario {
 	}
 	
 	public String listadoRecetasOrdenadasAlfabeticamente() throws RecetaException {
+		//isEmpty = size() ==0
 		if(recetas.isEmpty()) {
 			 throw new RecetaException("No  hay lista");
 		}
-		return null;
+		TreeSet <Receta> recetasOrdenadas =new TreeSet <Receta>(recetas.values());
+		StringBuilder sb= new StringBuilder();
 		
+		for (Receta receta : recetasOrdenadas) {
+			sb.append(receta);
+		}
+		return sb.toString();
 	}
 	
 	public String listadoRecetasConIngredienteOrdenadasPorTiempoPreparacion(String ingrediente) throws RecetaException{
-		for (Receta receta: recetas.values()) {
-			if (receta.necesitaIngrediente(ingrediente)) {
-			//	receIngre.add(receta);
-			}
+		if(recetas.isEmpty()) {
+			 throw new RecetaException("No  hay lista");
 		}
-		return ingrediente;
+		ArrayList<Receta> recetasOrdenadas =new ArrayList<Receta>();
+		StringBuilder sb= new StringBuilder();
+		for (Receta receta : recetasOrdenadas) {
+			if (receta.necesitaIngrediente(ingrediente)) {
+				recetasOrdenadas.add(receta);
+			}
+			
+		}
+		Collections.sort(recetasOrdenadas, new Comparator<Receta>() {
+	
+			@Override
+			public int compare(Receta o1, Receta o2) {
+				return Integer.compare(o1.getMinutosDePreparacion(), o2.getMinutosDePreparacion());
+			}
+		});
+		for (Receta receta : recetasOrdenadas) {
+			sb.append(receta);
+		}
+		return sb.toString();
+	}
 		
 	}
-}
