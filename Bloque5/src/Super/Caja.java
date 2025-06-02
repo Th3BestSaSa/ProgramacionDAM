@@ -6,14 +6,14 @@ public class Caja {
 
     private int numeroCaja;
     private boolean abierta;
-    private LinkedList<Integer> cola;
+    private LinkedList<Integer> colaClientes;
 
     private static int ultimoNumero = 1;
 
     public Caja(int numero) {
         this.numeroCaja = numero;
         this.abierta = false;
-        cola = new LinkedList<>();
+        colaClientes = new LinkedList<>();
     }
 
     public int getNumeroCaja() {
@@ -25,17 +25,20 @@ public class Caja {
     }
 
     public void setAbierta(boolean abierta) throws CajaException {
-        if (this.abierta && abierta) {
+        if (this.abierta && colaClientes.isEmpty()) {
             throw new CajaException("La caja ya está abierta");
         }
+        
+        
         this.abierta = abierta;
     }
 
     public Integer annadirCliente() throws CajaException {
+    	//tema de cola!!!!
         if (!abierta) {
             throw new CajaException("La caja está cerrada");
         }
-        cola.add(ultimoNumero);
+        colaClientes.add(ultimoNumero);
         return ultimoNumero++;
     }
 
@@ -43,14 +46,14 @@ public class Caja {
         if (!abierta) {
             throw new CajaException("La caja está cerrada");
         }
-        if (cola.isEmpty()) {
+        if (colaClientes.isEmpty()) {
             throw new CajaException("No hay clientes en la caja");
         }
-        return cola.poll();
+        return colaClientes.poll();
     }
 
     public int numeroDeClientesEsperando() {
-        return cola.size();
+        return colaClientes.size();
     }
 
     @Override

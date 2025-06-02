@@ -16,6 +16,8 @@ public class Mercadona {
     }
 
     public void abrirCaja(int numeroCaja) throws CajaException {
+    	
+    
         Caja caja = listaDeCajas.get(numeroCaja - 1);
         caja.setAbierta(true);
     }

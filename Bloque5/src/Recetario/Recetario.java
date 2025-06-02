@@ -37,6 +37,7 @@ public class Recetario {
 		if(recetas.isEmpty()) {
 			 throw new RecetaException("No  hay lista");
 		}
+		
 		ArrayList<Receta> recetasOrdenadas =new ArrayList<Receta>();
 		StringBuilder sb= new StringBuilder();
 		for (Receta receta : recetasOrdenadas) {
@@ -57,5 +58,12 @@ public class Recetario {
 		}
 		return sb.toString();
 	}
+
+	public Receta recetaMasRapida() {
+		Receta recetaMasRapida= null;
+		recetaMasRapida= recetas.values().stream()
+				.min((r1,r2) -> Integer.compare(r1.getMinutosDePreparacion(), r2.getMinutosDePreparacion())).get();
+		return recetaMasRapida;
 		
 	}
+}

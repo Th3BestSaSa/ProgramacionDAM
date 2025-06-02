@@ -7,6 +7,7 @@ public class Ingrediente {
 	
 	public Ingrediente (String ingrediente) {
 		this.nombreIngrediente=nombreIngrediente.toUpperCase();
+	
 	}
 	public Ingrediente(String nombreIngrediente, int cantidad) {
 		super();

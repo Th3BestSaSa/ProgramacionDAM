@@ -8,6 +8,7 @@ public class Receta {
 	private HashSet<Ingrediente> ingredientes;
 	private LinkedList<String> pasos;
 	
+	
 	public Receta(String nombreReceta, int minutosPreparacion) throws RecetaException {
 		this.nombreReceta = nombreReceta.toUpperCase();
 		setMinutosDePreparacion(minutosPreparacion);
