@@ -47,9 +47,10 @@ public class Ejercicio2 {
 
        
         System.out.println("Nueva contraseña: Correcta.");
-          contrasennaCorrecta= true;
+          contrasennaCorrecta= true; 
+          return contrasennaCorrecta;
     }
 
-  return contrasennaCorrecta;
+ 
 }
 

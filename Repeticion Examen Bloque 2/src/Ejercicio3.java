@@ -16,10 +16,8 @@ public class Ejercicio3 {
         System.out.println("Introduce el nombre de un mes:"); 
         mesIngresado = teclado.nextLine();
 
-      
         boolean esUnMesValido = esUnMes(mesIngresado);
 
-        
         System.out.println("¿Es un mes válido? " + esUnMesValido);
 
 
@@ -40,8 +38,8 @@ public class Ejercicio3 {
                  meses= true;
         }
 
-       
-        return  meses;
+     
     }
+        return  meses;
 }
 }
