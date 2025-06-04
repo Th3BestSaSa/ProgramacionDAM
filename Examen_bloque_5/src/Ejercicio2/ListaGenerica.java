@@ -1,8 +1,7 @@
 package Ejercicio2;
+
 import java.util.Iterator;
 import java.util.LinkedList;
-
-
 
 public class ListaGenerica<T> {
 
@@ -16,35 +15,36 @@ public class ListaGenerica<T> {
 	public void annadirElemento(T elemento) {
 		lista.add(elemento);
 	}
-//SEGUN GEMINI ESTO NO EVUELVE NULO
-	public ListaGenerica<T> listaHastaElemento( T elementoBuscado) throws ListaGenericaException {
+
+	public ListaGenerica<T> listaHastaElemento(T elementoBuscado)  {
 		ListaGenerica<T> resultado = new ListaGenerica<T>();
-		Iterator<T> it = this.lista.iterator();
+
+		Iterator<T> iterator = this.lista.iterator();
 		Boolean encontrado = false;
-		while(it.hasNext()) {
-			T actual= it.next();
-			 if(!encontrado){
-	            	resultado.annadirElemento(actual);
-	            }
-	            
-	            if(actual.equals(elementoBuscado)){
-	            	encontrado = true;
-	            }
-	            if (!encontrado) {
-	            	throw new ListaGenericaException ("No se encuentra el elemento");
-				}
+		while (iterator.hasNext()) {
+			T actual = iterator.next();
+			
+			if (!encontrado) {
+				resultado.annadirElemento(actual);
+			}
+
+			if (actual.equals(elementoBuscado)) {
+				encontrado = true;
+			}
 		}
+		
+
+//		if (!encontrado) {
+//		//	throw new ListaGenericaException("No se ha encontrado el elemento buscado."); // si esta vacio laza																			// EXCEPTIONS
+//		//	resultado = null;
+//		}
+
 		return resultado;
 	}
 
-
-	
-
 	@Override
 	public String toString() {
-		return "ListaGenerica=" + lista ;
+		return "ListaGenerica=" + lista;
 	}
-	
-	
-	
+
 }

@@ -36,7 +36,7 @@ public class Trayectos {
 	public List<Trayecto> listTrayectosOrdenadosPorPrecio() {
 		ArrayList<Trayecto> trayectosList = new ArrayList<Trayecto>();
 
-		TrayectosComparatorPrecio comparator = new TrayectosComparatorPrecio(); //de donde sale
+		TrayectosComparatorPrecio comparator = new TrayectosComparatorPrecio(); 
 		Collections.sort(trayectosList, comparator);
 
 		return trayectosList;
@@ -45,22 +45,22 @@ public class Trayectos {
 	// TODO
 	public String listadoTrayectosConEstacionOrigenOrdenadosPorTipoDeTren(String nombreEstacionOrigen)
 			throws TrenException {
+//hacer sin stream y lamda
+		List<String> resultados = new ArrayList<String>();
 
-List<String> resultados = new ArrayList<String>();
-        
-        if(!this.mapTrayectos.values().isEmpty()){
-        
-          resultados = this.mapTrayectos.values().stream()
-          .filter(trayecto -> trayecto.getPrimeraEstacionDelRecorrido().getNombreEstacion().equals(nombreEstacionOrigen))
-          .sorted(Comparator.comparing(Trayecto::getTipoTren))
-          .map(Trayecto::toString)
-          .collect(Collectors.toList());
+		if (!this.mapTrayectos.values().isEmpty()) {
 
-          if(resultados.isEmpty()){
-              throw new TrenException("No se ha encontrado la estación de origen.");
-          }
-          
-        }
+			resultados = this.mapTrayectos.values().stream()
+					.filter(trayecto -> trayecto.getPrimeraEstacionDelRecorrido().getNombreEstacion()
+							.equals(nombreEstacionOrigen))
+					.sorted(Comparator.comparing(Trayecto::getTipoTren)).map(Trayecto::toString)
+					.collect(Collectors.toList());
+
+			if (resultados.isEmpty()) {
+				throw new TrenException("No se ha encontrado la estación de origen.");
+			}
+
+		}
 		return String.join("/n", resultados);
 	}
 
@@ -69,12 +69,13 @@ List<String> resultados = new ArrayList<String>();
 		return null;
 	}
 }
-class TrayectosComparatorPrecio implements Comparator<Trayecto>{
-    // No se ponen los parentesis
 
-    @Override
-    public int compare(Trayecto t1, Trayecto t2){
-       
-        return (t1.getPrecio()> t2.getPrecio())? 1:(t1.getPrecio()< t2.getPrecio())? -1:0;
-    }
+class TrayectosComparatorPrecio implements Comparator<Trayecto> {
+	// No se ponen los parentesis
+
+	@Override
+	public int compare(Trayecto t1, Trayecto t2) {
+
+		return (t1.getPrecio() > t2.getPrecio()) ? 1 : (t1.getPrecio() < t2.getPrecio()) ? -1 : 0;
+	}
 }
