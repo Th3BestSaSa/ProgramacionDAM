@@ -5,18 +5,21 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-
-
 public class PrincipalEjercicio3 {
 	private static Scanner teclado = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		Historial historial = new Historial();
-		boolean salir;
+		boolean salir = false;
 
 		do {
+			try {
 			mostrarMenu();
-			salir = solicitarYTratarOpcion(historial);
+			
+				salir = solicitarYTratarOpcion(historial);
+			} catch (VisitaPaginaWebException e) {
+				System.out.println(e.getMessage());
+			}
 		} while (salir == false);
 
 	}
@@ -27,78 +30,67 @@ public class PrincipalEjercicio3 {
 
 	}
 
-	private static boolean solicitarYTratarOpcion(Historial historial) {
+	private static boolean solicitarYTratarOpcion(Historial historial) throws VisitaPaginaWebException {
 		int opcion;
 		boolean acabar = false;
-	
 
 		opcion = pedirInt("Introduzca la opcion");
-		try {
-			switch (opcion) {
-			case 1: {
-				VisitaPaginaWeb visita=crearPagina();
-				historial.annadirNuevaVisitaPaginaWeb(visita);
-				break;
-			}
-			case 2: {
-				System.out.println(historial);
-				break;
-			}
-			case 3: {
-				LocalDate fecha=crearFecha();
-				System.out.println(historial.consultarHistorialPorDia(fecha));
-				break;
-			}
-
-			case 4: {
-				historial.borrarHistorial();
-				System.out.println("Historial destruido, puede irse tranquilo");
-				break;
-
-			}
-			case 5: {
-				acabar = true;
-				break;
-			}
-
-			}
-		} catch (VisitaPaginaWebException e) {
-			System.out.println(e.getMessage());
+		switch (opcion) {
+		case 1: {
+			VisitaPaginaWeb visita = crearPagina();
+			historial.annadirNuevaVisitaPaginaWeb(visita);
+			break;
+		}
+		case 2: {
+			System.out.println(historial);
+			break;
+		}
+		case 3: {
+			LocalDate fecha = crearFecha();
+			System.out.println(historial.consultarHistorialPorDia(fecha));
+			break;
 		}
 
+		case 4: {
+			historial.borrarHistorial();
+			System.out.println("Historial destruido, puede irse tranquilo");
+			break;
+
+		}
+		case 5: {
+			acabar = true;
+			break;
+		}
+
+		}
 		return acabar;
 
 	}
 
-	//TODO
-	private static LocalDate crearFecha() {	
+	// TODO
+	private static LocalDate crearFecha() {
 
 		DateTimeFormatter formato = DateTimeFormatter.ofPattern("d/MM/yyyy");
+		LocalDate fecha;
 		return null;
 	}
-	
-	public String DateTimeFormatter (LocalDate fecha) {
-	    DateTimeFormatter formato = DateTimeFormatter.ofPattern("d/MM/yyyy");
-	    return fecha.format(formato);
+
+	public String DateTimeFormatter(LocalDate fecha) {
+		DateTimeFormatter formato = DateTimeFormatter.ofPattern("d/MM/yyyy");
+		return fecha.format(formato);
 	}
 
-	
-	private static VisitaPaginaWeb crearPagina() {
+	private static VisitaPaginaWeb crearPagina() throws VisitaPaginaWebException {
 		String direccion;
 		VisitaPaginaWeb nueva = null;
 
 		boolean incorrecto = false;
 
 		do {
-			try {
-				incorrecto = false;
-				direccion = pedirCadena("Introduce la direccion");
+			incorrecto = false;
+			direccion = pedirCadena("Introduce la direccion");
 
-				nueva = new VisitaPaginaWeb(direccion);
-			} catch (VisitaPaginaWebException e) {
-				incorrecto = true;
-				System.out.println(e.getMessage());
-			}
+			nueva = new VisitaPaginaWeb(direccion);
 		} while (incorrecto == true);
 
 		return nueva;
