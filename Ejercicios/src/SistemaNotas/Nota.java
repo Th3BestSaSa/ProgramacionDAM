@@ -32,4 +32,5 @@ public class Nota {
     public int hashCode() {
         return Objects.hash(nombreExamen.toLowerCase());
     }
+
 }
