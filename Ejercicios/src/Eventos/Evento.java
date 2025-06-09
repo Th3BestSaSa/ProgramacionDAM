@@ -33,7 +33,7 @@ public class Evento implements Comparable<Evento> {
     public LinkedList<String> getAsistentes() {
         return asistentes;
     }
-    public void agregarAsistente(String nombre) {
+    public void buscarNombre(String nombre) {
         // Agregar asistente
     }
 

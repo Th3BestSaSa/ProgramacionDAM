@@ -14,12 +14,16 @@ public class GestorDeEventos {
         this.eventosPorNombre = new HashMap<>();
     }
 
-    public boolean agregarEvento(Evento nombreEventos) {
-    	return eventos.add(nombreEventos);
+    public boolean agregarEvento(Evento evento) {
+    	
+    	boolean entra= eventos.add(evento);
+    	if (!entra) {
+			
+		}
        
     }
 
-    public boolean eliminarEvento(String nombre) {
+    public boolean eliminarEvento(String nombre) {// con el remove de las colecciones 
        Iterator<Evento> it = this.eventos.iterator();
        boolean encontrado= false;
        while (it.hasNext()) {
