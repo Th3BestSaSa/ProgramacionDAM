@@ -40,16 +40,16 @@ public class SistemaNotas {
 	}
 
 	public Optional<Estudiante> estudianteConMejorPromedio() {
-		
-		Estudiante alumnoConMayor;
-		double notaMayor= -1;
-		for (Estudiante alumno :estudiantesPorNombre ) {
-			notaMayor= alumno.calcularPromedio();
-			alumnoConMayor= alumno;
-			
-		}
-		return alumnoConMayor;
-		
-		//return mapaPorDni.values().stream().max(Comparator.comparingDouble(Estudiante::calcularPromedio));
+
+//		Estudiante alumnoConMayor = null;
+//		double notaMayor= -1;
+//		for (Estudiante alumno :estudiantesPorNombre ) {
+//			notaMayor= alumno.calcularPromedio();
+//			alumnoConMayor= alumno;
+//			
+//		}
+//		return alumnoConMayor;
+
+		return mapaPorDni.values().stream().max(Comparator.comparingDouble(Estudiante::calcularPromedio));
 	}
 }

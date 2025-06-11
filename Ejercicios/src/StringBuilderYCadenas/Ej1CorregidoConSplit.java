@@ -9,23 +9,21 @@ public class Ej1CorregidoConSplit {
 
 	}
 
-
-
 	private static String reducirTextoACantidadPalabras(String texto, int longitudMaxima) {
 
 		StringBuilder resultado = new StringBuilder();
-		String[] palabras=texto.split(" ");
-		int i=0;
-		boolean terminar= false;
-		
-		while (i< palabras.length && terminar==false) {
-			if (resultado.length()+ palabras.length> longitudMaxima) {
-				terminar= true;
-			}else {
+		String[] palabras = texto.split(" ");
+		int i = 0;
+		boolean terminar = false;
+
+		while (i < palabras.length && terminar == false) {
+			if (resultado.length() + palabras.length > longitudMaxima) {
+				terminar = true;
+			} else {
 				resultado.append(palabras[i]).append(" ");
 				i++;
 			}
-			if (terminar==true) {
+			if (terminar == true) {
 				resultado.append(". . .");
 			}
 		}

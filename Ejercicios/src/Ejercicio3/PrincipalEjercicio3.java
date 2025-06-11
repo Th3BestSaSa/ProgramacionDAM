@@ -14,8 +14,8 @@ public class PrincipalEjercicio3 {
 
 		do {
 			try {
-			mostrarMenu();
-			
+				mostrarMenu();
+
 				salir = solicitarYTratarOpcion(historial);
 			} catch (VisitaPaginaWebException e) {
 				System.out.println(e.getMessage());

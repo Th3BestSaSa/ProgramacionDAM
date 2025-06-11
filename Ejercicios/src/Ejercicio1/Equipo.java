@@ -1,4 +1,5 @@
 package Ejercicio1;
+
 import java.util.*;
 
 public class Equipo {
@@ -34,46 +35,46 @@ public class Equipo {
 		 * Borrar un alumno (recibe como parámetro el objeto alumno a borrar). Si el
 		 * alumno no existe en el equipo debe saltar una excepción.
 		 */
-		Iterator<Alumno> it= this.conjuntoAlumnos.iterator();
-		boolean encontrado= false;
+		Iterator<Alumno> it = this.conjuntoAlumnos.iterator();
+		boolean encontrado = false;
 		while (it.hasNext()) {
 			Alumno alumno = (Alumno) it.next();
 			if (alumno.equals(alumnoABorrar)) {
 				it.remove();
-				encontrado=true;
+				encontrado = true;
 			}
 			if (!encontrado) {
-			    throw new EquipoException("No se ha encontrado el elemento buscado.");
+				throw new EquipoException("No se ha encontrado el elemento buscado.");
 			}
 
 		}
 	}
 
 	public Alumno buscarAlumno(Alumno patronAlumnoBuscado) throws EquipoException {
-		Alumno alumno = null ;
+		Alumno alumno = null;
 		/**
-		 * Saber si un alumno pertenece al equipo.
-		 * Recibe como parámetro el objeto alumno a buscar y 
-		 * devuelve null si no lo encuentra y el  objeto alumno si existe.
+		 * Saber si un alumno pertenece al equipo. Recibe como parámetro el objeto
+		 * alumno a buscar y devuelve null si no lo encuentra y el objeto alumno si
+		 * existe.
 		 */
-		Alumno alumnoEncontrado=null;
-		boolean encontrado =false;
+		Alumno alumnoEncontrado = null;
+		boolean encontrado = false;
 		Alumno alumnoDeLaColeccion = null;
-		
-		Iterator<Alumno> iterator= conjuntoAlumnos.iterator();
-		while(iterator.hasNext() && !encontrado){
-			
-			alumnoDeLaColeccion=iterator.next();
-			
-			if(alumnoDeLaColeccion.equals(patronAlumnoBuscado)){
-				alumnoEncontrado=alumnoDeLaColeccion;
-				encontrado=true;
-							}
+
+		Iterator<Alumno> iterator = conjuntoAlumnos.iterator();
+		while (iterator.hasNext() && !encontrado) {
+
+			alumnoDeLaColeccion = iterator.next();
+
+			if (alumnoDeLaColeccion.equals(patronAlumnoBuscado)) {
+				alumnoEncontrado = alumnoDeLaColeccion;
+				encontrado = true;
+			}
 		}
 		if (!encontrado) {
-		    throw new EquipoException("No se ha encontrado el elemento buscado.");
+			throw new EquipoException("No se ha encontrado el elemento buscado.");
 		}
-		 return alumno;
+		return alumno;
 
 	}
 
@@ -85,7 +86,7 @@ public class Equipo {
 	 * @return nuevo equipo resultado de unir los dos anteriores
 	 */
 	public Equipo fusionDeEquipos(Equipo otro, String nombre) {
-		//con un iterator complicado, alomejor con un foreach
+		// con un iterator complicado, alomejor con un foreach
 		return otro;
 
 	}
@@ -105,14 +106,13 @@ public class Equipo {
 
 	@Override
 	public String toString() {
-	    StringBuilder sb = new StringBuilder();
-	    sb.append("Equipo: ").append(nombreEquipo).append("\n");
-	    sb.append("Alumnos:\n");
-	    for (Alumno alumno : conjuntoAlumnos) {
-	        sb.append(" - ").append(alumno.toString()).append("\n");
-	    }
-	    return sb.toString();
+		StringBuilder sb = new StringBuilder();
+		sb.append("Equipo: ").append(nombreEquipo).append("\n");
+		sb.append("Alumnos:\n");
+		for (Alumno alumno : conjuntoAlumnos) {
+			sb.append(" - ").append(alumno.toString()).append("\n");
+		}
+		return sb.toString();
 	}
-
 
 }

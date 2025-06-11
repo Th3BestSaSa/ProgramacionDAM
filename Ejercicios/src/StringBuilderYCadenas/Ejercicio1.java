@@ -14,6 +14,7 @@ public class Ejercicio1 {
 		System.out.println(resultado);
 
 	}
+
 // segun fatima lo mas facil seria con el split 
 	private static String reducirTextoACantidadPalabras(String texto, int cantidadCaracteres) {
 

@@ -5,13 +5,13 @@ import java.time.LocalDate;
 public class VisitaPaginaWeb {
 
 	private String direccion;
-	
+
 	public VisitaPaginaWeb(String direccion) throws VisitaPaginaWebException {
-		if (direccion==null) {
+		if (direccion == null) {
 			throw new VisitaPaginaWebException("Vacio");
 		}
-		this.direccion=direccion;
-		
+		this.direccion = direccion;
+
 	}
 
 	public String getDireccion() {

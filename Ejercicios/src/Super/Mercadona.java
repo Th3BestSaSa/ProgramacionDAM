@@ -49,36 +49,35 @@ public class Mercadona {
 	 */
 
 	private int cajaMenosCliente() throws CajaException {
-		int minimoDeClientes= Integer.MAX_VALUE; 
-		
+		int minimoDeClientes = Integer.MAX_VALUE;
+
 //		Empezar con un número muy grande.
 //		Así, cualquier número real de clientes será menor y reemplazará ese valor.
-		int indiceElegido= -1; //Dice la caja elegida
-		
+		int indiceElegido = -1; // Dice la caja elegida
+
 //		 Se usa -1 como un valor de "sentinela" o marcador
 //		 Eso significa:
 //
 //		 “Aún no hemos encontrado ninguna caja válida (abierta)”.
 		boolean encontrada = false;
-		
+
 		for (int i = 0; i < listaDeCajas.size(); i++) {
-			
-				Caja caja = this.listaDeCajas.get(i);
-				if (caja.isAbierta() ) {
-					int clientes = caja.numeroDeClientesEsperando();
-					if (!encontrada || clientes < minimoDeClientes) {
-						minimoDeClientes = clientes;
-		                indiceElegido = i;
-		                encontrada = true;
-		            }
+
+			Caja caja = this.listaDeCajas.get(i);
+			if (caja.isAbierta()) {
+				int clientes = caja.numeroDeClientesEsperando();
+				if (!encontrada || clientes < minimoDeClientes) {
+					minimoDeClientes = clientes;
+					indiceElegido = i;
+					encontrada = true;
+				}
 			}
-			
+
 		}
-		if ( indiceElegido== -1) {
+		if (indiceElegido == -1) {
 			throw new CajaException("cerrada");
 		}
-		return indiceElegido; //Dice la caja elegida
-
+		return indiceElegido; // Dice la caja elegida
 
 	}
 

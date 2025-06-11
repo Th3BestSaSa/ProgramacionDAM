@@ -6,27 +6,28 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class GestorDeEventos {
-    private TreeSet<Evento> eventos;
-    private Map<String, Evento> eventosPorNombre;
+	private TreeSet<Evento> eventos;
+	private Map<String, Evento> eventosPorNombre;
 
-    public GestorDeEventos() {
-        this.eventos = new TreeSet<>();
-        this.eventosPorNombre = new HashMap<>();
-    }
+	public GestorDeEventos() {
+		this.eventos = new TreeSet<>();
+		this.eventosPorNombre = new HashMap<>();
+	}
 
-    public boolean agregarEvento(Evento evento) {
-    	
-    	boolean entra= eventos.add(evento);
-    	if (!entra) {
-			
+	public boolean agregarEvento(Evento evento) {
+
+		boolean entra = eventos.add(evento);
+		if (!entra) {
+
 		}
-       
-    }
+		return entra;
 
-    public boolean eliminarEvento(String nombre) {// con el remove de las colecciones 
+	}
+
+	public boolean eliminarEvento(String nombre) {// con el remove de las colecciones
        Iterator<Evento> it = this.eventos.iterator();
        boolean encontrado= false;
-       while (it.hasNext()) {
+       while (it.hasNext() && !encontrado) {
 		Evento evento = it.next();
 		if(evento.getNombre().equals(nombre)){
 			it.remove();
@@ -35,46 +36,57 @@ public class GestorDeEventos {
 		
 	}
 	return encontrado;
-    }
 
-    public boolean agregarAsistente(String nombreEvento, String asistente) {
-    	 Iterator<Evento> it = this.eventos.iterator();
-         boolean encontrado= false;
-         while (it.hasNext()) {
-  		Evento evento = it.next();
-  		if(evento.getNombre().equals(nombreEvento)){
-  			evento.getAsistentes().add(asistente);
-  			encontrado= true;
-       
-    }
-         }
-		return encontrado;
-    }
-    public void mostrarEventosPorFecha() {
-        // Mostrar eventos por fecha
-    }
+//		return eventos.removeIf(evento -> evento.getNombre().equals(nombre));
 
-    public void mostrarEventosPorNombre() {
-        // Mostrar eventos por nombre
-    }
+	}
 
-    public List<String> buscarAsistentesPorEvento(String nombreEvento) {
-        return null;
-    }
+	public void buscarNombre(String nombre) {//revisar
+		Iterator<Evento> it = this.eventos.iterator();
+		boolean encontrado = false;
+		while (it.hasNext()) {
+			Evento evento = it.next();
+			if (evento.getAsistentes().equals(nombre)) {
+				encontrado = true;
+			}
+	}
+	}
+	public void mostrarEventosPorFecha() {
+		// Ordenar la lista de eventos por fecha
+		
+		eventos.stream().sorted(Comparator.comparing(Evento::getFecha));
 
-    public Optional<Evento> eventoConMenosAsistentes() {
-        return Optional.empty();
-    }
+		// Mostrar cada evento
+		for (Evento evento : eventos) {
+			System.out.println(evento);
+		}
+	}
 
-    public double mediaAsistentes() {
-        return 0.0;
-    }
+	public void mostrarEventosPorNombre() {
+		eventosPorNombre.values().stream().sorted(Comparator.comparing(Evento::getNombre)).forEach(System.out::println);
+	}
 
-    public List<Evento> eventosPorFechaOrdenadosPorNombre(LocalDate fecha) {
-        return null;
-    }
+	public List<String> buscarAsistentesPorEvento(String nombreEvento) {
+		return null;
+	}
 
-    public String eventosConMasDe30AsistentesYHoraPosterior(LocalDate fecha) {
-        return null;
-    }
+	public Optional<Evento> eventoConMenosAsistentes() {
+		return Optional.empty();
+	}
+
+	public double mediaAsistentes() {
+		return 0.0;
+	}
+
+	public List<Evento> eventosPorFechaOrdenadosPorNombre(LocalDate fecha) {
+		return null;
+	}
+
+	public String eventosConMasDe30AsistentesYHoraPosterior(LocalDate fecha) {
+		return null;
+	}
+	public void asistentesEnComun(String nombreEvento1, String nombreEvento2) {
+		Iterator<Evento> it= this.eventos.iterator();
+	}
+
 }
