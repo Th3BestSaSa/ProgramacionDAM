@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio5r2"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-07 07:53:59 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA3OyIwNzo0MzowNSAiOzIyMDI="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA3OyIwNzo1Mzo1OSAiOzE7MjMyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, contador" type="Integer" array="False" size=""/>
+            <assign variable="contador" expression="0"/>
+            <do expression="numero&gt;0">
+                <output expression="&quot;Introduce un n&#250;mero&quot;" newline="True"/>
+                <input variable="numero"/>
+                <assign variable="contador" expression="contador +1"/>
+            </do>
+            <assign variable="contador" expression="contador -1"/>
+            <output expression="&quot;Has introducido &quot; &amp; contador &amp; &quot; numeros positivos&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

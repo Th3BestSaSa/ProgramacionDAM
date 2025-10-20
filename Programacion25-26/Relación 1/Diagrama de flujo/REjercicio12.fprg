@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio12"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-23 05:41:22 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNTozMjoxNSAiOzIyMDU="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNTo0MToyMiAiOzE7MjMxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tipoTarta, nata, nombre" type="String" array="False" size=""/>
+            <declare name="precio" type="Real" array="False" size=""/>
+            <assign variable="precio" expression="0"/>
+            <output expression="&quot;Introduce el tipo de tarta&quot;" newline="True"/>
+            <input variable="tipoTarta"/>
+            <if expression="tipoTarta=&quot;M&quot;">
+                <then>
+                    <assign variable="precio" expression="12"/>
+                </then>
+                <else>
+                    <if expression="tipoTarta=&quot;F&quot;">
+                        <then>
+                            <assign variable="precio" expression="16"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Tarta de chocolate blanco o negro&quot;" newline="True"/>
+                            <input variable="tipoTarta"/>
+                            <if expression="tipoTarta=&quot;B&quot;">
+                                <then>
+                                    <assign variable="precio" expression="15"/>
+                                </then>
+                                <else>
+                                    <assign variable="precio" expression="14"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Quiere nata&quot;" newline="True"/>
+            <input variable="nata"/>
+            <if expression="nata=&quot;S&quot;">
+                <then>
+                    <assign variable="precio" expression="precio + 2.50"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Quiere el nombre&quot;" newline="True"/>
+            <input variable="nombre"/>
+            <if expression="nombre=&quot;S&quot;">
+                <then>
+                    <assign variable="precio" expression="precio + 2.75"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;el precio es &quot; &amp; precio" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio10r2"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-09 07:14:20 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA5OyIwNjoxMjoyMyAiOzIxOTk="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA5OyIwNzoxNDoyMCAiOzE7MjMwNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <declare name="factorial, contador" type="Real" array="False" size=""/>
+            <assign variable="factorial" expression="1"/>
+            <assign variable="contador" expression="1"/>
+            <do expression="numero&lt;0">
+                <output expression="&quot;Introduce un n&#250;mero&quot;" newline="True"/>
+                <input variable="numero"/>
+            </do>
+            <if expression="numero==0">
+                <then>
+                    <output expression="&quot;El factorial de 0 es 0&quot;" newline="True"/>
+                </then>
+                <else>
+                    <while expression="contador&lt;=numero">
+                        <assign variable="factorial" expression="factorial*contador"/>
+                        <assign variable="contador" expression="contador+1"/>
+                    </while>
+                </else>
+            </if>
+            <output expression="&quot;El factorial del n&#250;mero &quot;&amp;numero&amp; &quot; es &quot;+factorial" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,14 @@
+﻿Función Principal
+    Declarar Entero numero
+
+    Salida "Introduce un numero"
+    Entrada numero
+    Si numero<0
+        Asignar numero = -numero
+    Fin
+    Si numero%2==0
+        Salida "Par"
+    Si no
+        Salida "Impar"
+    Fin
+Fin

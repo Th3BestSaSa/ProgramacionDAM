@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio10"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-23 05:25:40 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNToxMjo0NyAiOzIyMDg="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNToyNTo0MCAiOzE7MjMxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="caracter" type="String" array="False" size=""/>
+            <declare name="numero1, numero2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce el caracter&quot;" newline="True"/>
+            <input variable="caracter"/>
+            <output expression="&quot;Introduce el primer numero&quot;" newline="True"/>
+            <input variable="numero1"/>
+            <output expression="&quot;Introduce el segundo numero&quot;" newline="True"/>
+            <input variable="numero2"/>
+            <if expression="caracter=&quot;+&quot;">
+                <then>
+                    <assign variable="numero1" expression="numero1+numero2"/>
+                </then>
+                <else>
+                    <if expression="caracter=&quot;-&quot;">
+                        <then>
+                            <assign variable="numero1" expression="numero1-numero2"/>
+                        </then>
+                        <else>
+                            <if expression="caracter=&quot;*&quot;">
+                                <then>
+                                    <assign variable="numero1" expression="numero1*numero2"/>
+                                </then>
+                                <else>
+                                    <if expression="caracter=&quot;/&quot;">
+                                        <then>
+                                            <assign variable="numero1" expression="numero1/numero2"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;El caracter no es aritmetico&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;El resultado es &quot; &amp; numero1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

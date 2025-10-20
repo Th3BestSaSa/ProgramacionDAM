@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio6"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-25 08:27:02 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNDozMDo1MCAiOzIyMDE="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNDozODozMiAiOzE7MjMxNw=="/>
+        <attribute name="edited" value="REFNMTtQQzsyMDI1LTA5LTI1OyIwODoyNzowMiAiOzE7MTcxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="calificacion" type="Real" array="False" size=""/>
+            <output expression="&quot;Introduzca la calificacion del alumno&quot;" newline="True"/>
+            <input variable="calificacion"/>
+            <if expression="calificacion&lt;0 or calificacion &gt;100">
+                <then>
+                    <output expression="&quot;La calificacion es incorecta&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="calificacion&gt;=90">
+                        <then>
+                            <output expression="&quot;A&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="calificacion&gt;=80">
+                                <then>
+                                    <output expression="&quot;B&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="calificacion&gt;=70">
+                                        <then>
+                                            <output expression="&quot;C&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="calificacion&gt;=60">
+                                                <then>
+                                                    <output expression="&quot;D&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;F&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

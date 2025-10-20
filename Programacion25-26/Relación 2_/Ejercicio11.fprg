@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio11"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-13 07:09:32 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTEzOyIwNzowMzowMCAiOzIxOTA="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTEzOyIwNzowOTozMiAiOzE7MjMwOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero1, numero2" type="Integer" array="False" size=""/>
+            <do expression="numero1 &lt; 0 or numero2 &lt; 0">
+                <output expression="&quot;Introduce un n&#250;mero entero positivo:&quot;" newline="True"/>
+                <input variable="numero1"/>
+                <output expression="&quot;Introduce un n&#250;mero entero positivo:&quot;" newline="True"/>
+                <input variable="numero2"/>
+            </do>
+            <while expression="numero1 &lt; numero2">
+                <output expression="numero1" newline="True"/>
+                <assign variable="numero1" expression="numero1 +7"/>
+            </while>
+            <while expression="numero1 &gt; numero2">
+                <output expression="numero2" newline="True"/>
+                <assign variable="numero2" expression="numero2 +7"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio9"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-26 08:48:50 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNTowMDo1MiAiOzIyMDE="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNTowOTozOSAiOzM7REFNMTtQQzsyMDI0LTA5LTMwOyIwMTozNjoyNSAiO2hvcmEuZnByZzs0OTQ0"/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNToxMjowNiAiOzE7MjMxMQ=="/>
+        <attribute name="edited" value="REFNMTtQQzsyMDI1LTA5LTI2OyIwODo0ODo1MCAiOzM7MTcyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hora, hora2, minutos, minutos2, segundos, segundos2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Marcacion 1&quot;" newline="True"/>
+            <output expression="&quot;Hora&quot;" newline="True"/>
+            <input variable="hora"/>
+            <output expression="&quot;Minutos&quot;" newline="True"/>
+            <input variable="minutos"/>
+            <output expression="&quot;Segundos&quot;" newline="True"/>
+            <input variable="segundos"/>
+            <output expression="&quot;Marcacion 2&quot;" newline="True"/>
+            <output expression="&quot;Hora&quot;" newline="True"/>
+            <input variable="hora2"/>
+            <output expression="&quot;Minutos&quot;" newline="True"/>
+            <input variable="minutos2"/>
+            <output expression="&quot;Segundos&quot;" newline="True"/>
+            <input variable="segundos2"/>
+            <if expression="hora&lt;=24 and minutos &lt;=60 and segundos &lt;=60 and hora2&lt;=24 and minutos2 &lt;=60 and segundos2 &lt;=60">
+                <then>
+                    <output expression="&quot;Error&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="segundos" expression="(hora*3600)+(minutos*60)+ segundos"/>
+                    <assign variable="segundos2" expression="(hora2*3600)+(minutos2*60)+ segundos2"/>
+                    <if expression="segundos=segundos2">
+                        <then>
+                            <output expression="&quot;Hora 1 es igual a hora 2&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="segundos&gt;segundos2">
+                                <then>
+                                    <output expression="&quot;Hora 1 es mayor&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Hora 2 es mayor&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

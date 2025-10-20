@@ -1,0 +1,23 @@
+﻿Función Principal
+    Declarar Real lado1, lado2, lado3
+
+    Salida "Introduce el lado 1 de un triangulo"
+    Entrada lado1
+    Salida "Introduce el lado 2 de un triangulo"
+    Entrada lado2
+    Salida "Introduce el lado 3 de un triangulo"
+    Entrada lado3
+    Si lado1<0 or lado2<0 or lado3<0
+        Salida "Error en alguno de los datos"
+    Si no
+        Si lado1 == lado2 and lado1 == lado3 and lado2==lado3
+            Salida "Equilatero"
+        Si no
+            Si lado1 == lado2 or lado1 == lado3 or lado2==lado3
+                Salida "Isosceles"
+            Si no
+                Salida "Escaleno"
+            Fin
+        Fin
+    Fin
+Fin

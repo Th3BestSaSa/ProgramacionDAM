@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio3"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-23 09:30:33 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIyOyIwNTo1MzozNSAiOzIyMDk="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIyOyIwNjowMzoxOSAiOzE7MjMxNQ=="/>
+        <attribute name="edited" value="REFNMTtQQzsyMDI1LTA5LTIzOyIwOTozMDozMyAiOzM7MTcxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, auxiliar" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce un numero&quot;" newline="True"/>
+            <input variable="numero"/>
+            <assign variable="auxiliar" expression="numero"/>
+            <if expression="numero&lt;0">
+                <then>
+                    <assign variable="numero" expression="-numero"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="numero%2==0">
+                <then>
+                    <output expression="&quot;El numero &quot;&amp; auxiliar&amp;&quot; multiplo de dos.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="numero%3==0">
+                <then>
+                    <output expression="&quot;El numero &quot;&amp; auxiliar&amp;&quot; multiplo de tres.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+Funcion Principal
+	Declarar Cadena caracter
+
+	Salida "Introduce un caracter"
+	Entrada caracter
+
+	Si caracter != "A" and caracter !="E" and caracter != "I" and caracter !="O" and caracter !="U"
+		Salida "No es una vocal " & caracter
+	Sino
+		Si caracter =="A"
+			Salida "Es  vocal " & caracter
+		Sino 
+			Si caracter =="E"
+				Salida "Es  vocal " & caracter
+			Sino 
+				Si caracter =="I"
+					Salida "Es  vocal " & caracter
+				Sino 
+					Si caracter =="O"
+						Salida "Es  vocal " & caracter
+					Sino 
+						Salida "Es  vocal " & caracter
+
+					
+					Fin
+				Fin
+			Fin
+		Fin
+	Fin
+Fin

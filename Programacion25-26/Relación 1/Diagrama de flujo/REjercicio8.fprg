@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio8"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-26 08:34:17 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNDo0ODo1MCAiOzIyMTA="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNDo1NTo0NyAiOzE7Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNDozODo0MiAiOzQ1OTE="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNTowMDoyMyAiOzE7MjMwNw=="/>
+        <attribute name="edited" value="REFNMTtQQzsyMDI1LTA5LTI2OyIwODozNDoxNyAiOzQ7MTcyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="estadoCivil" type="String" array="False" size=""/>
+            <declare name="edad" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduzca el estado civil persona (S-Soltero, C-Casado, V-Viudo y D-Divorciado)&quot;" newline="True"/>
+            <input variable="estadoCivil"/>
+            <output expression="&quot;Introduce la edad&quot;" newline="True"/>
+            <input variable="edad"/>
+            <if expression="edad&lt;0 or edad &gt;100">
+                <then>
+                    <output expression="&quot;Edad incorrecta&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="edad&gt;50">
+                        <then>
+                            <output expression="&quot;8.5%&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="edad&gt;= 35">
+                                <then>
+                                    <output expression="&quot;10.5%&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="(estadoCivil ==&quot;D&quot; or estadoCivil ==&quot;S&quot;)">
+                                        <then>
+                                            <output expression="&quot;11.3%&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;12%&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,27 @@
+﻿Función Principal
+    Declarar Real numero1, numero2, numero3, numero4, media
+
+    Salida "Introduce el numero 1:"
+    Entrada numero1
+    Salida "Introduce el numero 2:"
+    Entrada numero2
+    Salida "Introduce el numero 3:"
+    Entrada numero3
+    Salida "Introduce el numero 4:"
+    Entrada numero4
+    Asignar media = (numero1+ numero2+ numero3+ numero4)/4
+    Salida "La media de los numero introducidos es :" & media
+    Salida "Los numeros superiores a la media son :"
+    Si numero1>media
+        Salida numero1
+    Fin
+    Si numero2>media
+        Salida numero2
+    Fin
+    Si numero3>media
+        Salida numero3
+    Fin
+    Si numero4>media
+        Salida numero4
+    Fin
+Fin

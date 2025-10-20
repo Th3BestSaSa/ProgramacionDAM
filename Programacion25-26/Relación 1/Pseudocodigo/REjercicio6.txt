@@ -1,0 +1,36 @@
+Funcion Principal 
+	Declarar Real calificacion
+	
+	Salida "Introduzca la calificacion del alumno"
+	Entrada calificacion
+
+	Si calificacion<0 or calificacion>100
+		Salida "La calificacion es incorrecta"
+	Si no 
+		Si calificacion<0 or calificacion>100
+			Salida "La calificacion es incorrecta"
+		Si no 
+			Si calificacion>=90
+				Salida "La calificacion es A"
+			Si no 
+				Si calificacion>=90 
+					Salida "La calificacion es A"
+				Si no 
+					Si calificacion>=80 
+						Salida "La calificacion es B"
+					Si no 
+						Si calificacion>=70 
+							Salida "La calificacion es C"
+						Si no 
+							Si calificacion>=60 
+								Salida "La calificacion es D"
+							Si no
+								Salida "La calificacion es D"
+							Fin
+						Fin
+					Fin
+				Fin
+			Fin
+		Fin
+	Fin
+Fin

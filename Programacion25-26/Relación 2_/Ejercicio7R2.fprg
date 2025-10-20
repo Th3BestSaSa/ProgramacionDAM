@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio7R2"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-08 09:52:37 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA4OyIwOTo0NjowMyAiOzIyMDY="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA4OyIwOTo1MjozNyAiOzE7MjMxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cantidad, suma, numero, contador" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <do expression="cantidad &lt;= 0">
+                <output expression="&quot;Introduce la cantidad de n&#250;meros a realizar la media: &quot;" newline="True"/>
+                <input variable="cantidad"/>
+            </do>
+            <assign variable="suma" expression="0"/>
+            <assign variable="contador" expression="0"/>
+            <while expression="contador &lt;= cantidad">
+                <output expression="&quot;Introduce el n&#250;mero &quot; + contador + &quot; de &quot; + cantidad" newline="True"/>
+                <input variable="numero"/>
+                <assign variable="suma" expression="suma + numero"/>
+            </while>
+            <assign variable="media" expression="suma/cantidad"/>
+            <output expression="media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

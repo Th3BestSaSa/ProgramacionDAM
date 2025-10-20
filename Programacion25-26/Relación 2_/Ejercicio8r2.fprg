@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio8r2"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-09 06:10:13 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA5OyIwNTozMjo0NyAiOzIyMDY="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA5OyIwNjoxMDoxMyAiOzE7MjMwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, menor" type="Real" array="False" size=""/>
+            <declare name="repetir" type="String" array="False" size=""/>
+            <do expression="repetir == &quot;S&quot;">
+                <output expression="&quot;Introduce un numero &quot;" newline="True"/>
+                <input variable="numero"/>
+                <assign variable="menor" expression="numero"/>
+                <output expression="&quot;&#191;Desea introducir otro n&#250;mero?(S-Si,N-No)&quot;" newline="True"/>
+                <input variable="repetir"/>
+                <while expression=""/>
+                <do expression=""/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

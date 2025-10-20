@@ -1,0 +1,16 @@
+﻿Función Principal
+    Declarar Entero numero, auxiliar
+
+    Salida "Introduce un numero"
+    Entrada numero
+    Asignar auxiliar = numero
+    Si numero<0
+        Asignar numero = -numero
+    Fin
+    Si numero%2==0
+        Salida "El numero "& auxiliar&" multiplo de dos."
+    Fin
+    Si numero%3==0
+        Salida "El numero "& auxiliar&" multiplo de tres."
+    Fin
+Fin

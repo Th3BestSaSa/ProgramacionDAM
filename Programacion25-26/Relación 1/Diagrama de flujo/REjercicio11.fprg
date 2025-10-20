@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio11"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-23 05:32:00 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNToyNjoxMyAiOzIyMDY="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNTozMjowMCAiOzE7MjMwNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="edad" type="Integer" array="False" size=""/>
+            <declare name="ocupacion" type="String" array="False" size=""/>
+            <output expression="&quot;Introduce la edad&quot;" newline="True"/>
+            <input variable="edad"/>
+            <output expression="&quot;Introduce la ocupacion&quot;" newline="True"/>
+            <input variable="ocupacion"/>
+            <if expression="ocupacion=&quot;Estudiante&quot;">
+                <then>
+                    <output expression="&quot;30%&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="ocupacion=&quot;Profesor&quot;">
+                        <then>
+                            <output expression="&quot;Gratis&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="edad&lt;12">
+                                <then>
+                                    <output expression="&quot;Gratis&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="edad&lt;=18 and edad&gt;=12">
+                                        <then>
+                                            <output expression="&quot;50%&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;25%&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,23 @@
+﻿Función Principal
+    Declarar Entero edad
+
+    Salida "Introduce la edad"
+    Entrada edad
+    Si edad <0 or edad >=100
+        Salida "Error, edad incorrecta"
+    Si no
+        Si edad >= 0 and edad<12
+            Salida "Es un niño"
+        Si no
+            Si edad<=17
+                Salida "Es un adolescente"
+            Si no
+                Si edad<=29
+                    Salida "Es un joven"
+                Si no
+                    Salida "Es un adulto"
+                Fin
+            Fin
+        Fin
+    Fin
+Fin

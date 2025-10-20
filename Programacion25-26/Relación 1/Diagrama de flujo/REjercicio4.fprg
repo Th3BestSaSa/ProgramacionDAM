@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio4"/>
+        <attribute name="authors" value="DAM1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-23 10:01:17 "/>
+        <attribute name="created" value="REFNMTtQQzsyMDI1LTA5LTIzOyIwOTo1NDowOCAiOzE2MTA="/>
+        <attribute name="edited" value="REFNMTtQQzsyMDI1LTA5LTIzOyIxMDowMToxNyAiOzE7MTcwMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="edad" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce la edad&quot;" newline="True"/>
+            <input variable="edad"/>
+            <if expression="edad &lt;0 or edad &gt;=100">
+                <then>
+                    <output expression="&quot;Error, edad incorrecta&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="edad &gt;= 0 and edad&lt;12">
+                        <then>
+                            <output expression="&quot;Es un ni&#241;o&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="edad&lt;=17">
+                                <then>
+                                    <output expression="&quot;Es un adolescente&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="edad&lt;=29">
+                                        <then>
+                                            <output expression="&quot;Es un joven&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Es un adulto&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

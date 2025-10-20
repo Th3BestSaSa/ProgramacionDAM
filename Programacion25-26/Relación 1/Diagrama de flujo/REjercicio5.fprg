@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio5"/>
+        <attribute name="authors" value="DAM1"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-23 09:53:31 "/>
+        <attribute name="created" value="REFNMTtQQzsyMDI1LTA5LTIzOyIwOTo0NTowOCAiOzE2MTA="/>
+        <attribute name="edited" value="REFNMTtQQzsyMDI1LTA5LTIzOyIwOTo1MzozMSAiOzE7MTcxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero1, numero2, numero3, numero4, media" type="Real" array="False" size=""/>
+            <output expression="&quot;Introduce el numero 1:&quot;" newline="True"/>
+            <input variable="numero1"/>
+            <output expression="&quot;Introduce el numero 2:&quot;" newline="True"/>
+            <input variable="numero2"/>
+            <output expression="&quot;Introduce el numero 3:&quot;" newline="True"/>
+            <input variable="numero3"/>
+            <output expression="&quot;Introduce el numero 4:&quot;" newline="True"/>
+            <input variable="numero4"/>
+            <assign variable="media" expression="(numero1+ numero2+ numero3+ numero4)/4"/>
+            <output expression="&quot;La media de los numero introducidos es :&quot; &amp; media" newline="True"/>
+            <output expression="&quot;Los numeros superiores a la media son :&quot;" newline="True"/>
+            <if expression="numero1&gt;media">
+                <then>
+                    <output expression="numero1" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="numero2&gt;media">
+                <then>
+                    <output expression="numero2" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="numero3&gt;media">
+                <then>
+                    <output expression="numero3" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="numero4&gt;media">
+                <then>
+                    <output expression="numero4" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

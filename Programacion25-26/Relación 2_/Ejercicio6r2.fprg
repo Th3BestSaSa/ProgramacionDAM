@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio6r2"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-08 09:42:02 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA4OyIwOToxOToxMCAiOzIyMDQ="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA4OyIwOTo0MjowMiAiOzE7MjMwOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero1, numero2, resultado" type="Integer" array="False" size=""/>
+            <assign variable="resultado" expression="0"/>
+            <declare name="contador" type="Integer" array="False" size=""/>
+            <assign variable="contador" expression="0"/>
+            <output expression="&quot;Introduce dos n&#250;meros para hacer su producto: &quot;" newline="True"/>
+            <input variable="numero1"/>
+            <input variable="numero2"/>
+            <while expression="contador &lt;numero2">
+                <assign variable="resultado" expression="resultado+numero1"/>
+                <assign variable="contador" expression="contador +1"/>
+            </while>
+            <output expression="resultado" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

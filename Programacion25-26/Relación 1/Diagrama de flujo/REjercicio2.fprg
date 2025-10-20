@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio2"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-23 09:08:17 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIwOyIwMjoyOTo1MSAiOzIyMDU="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIwOyIwMjozNDo0MyAiOzE7MjMxMA=="/>
+        <attribute name="edited" value="REFNMTtQQzsyMDI1LTA5LTIzOyIwOTowODoxNyAiOzE7MTcxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lado1, lado2, lado3" type="Real" array="False" size=""/>
+            <output expression="&quot;Introduce el lado 1 de un triangulo&quot;" newline="True"/>
+            <input variable="lado1"/>
+            <output expression="&quot;Introduce el lado 2 de un triangulo&quot;" newline="True"/>
+            <input variable="lado2"/>
+            <output expression="&quot;Introduce el lado 3 de un triangulo&quot;" newline="True"/>
+            <input variable="lado3"/>
+            <if expression="lado1&lt;0 or lado2&lt;0 or lado3&lt;0">
+                <then>
+                    <output expression="&quot;Error en alguno de los datos&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="lado1 == lado2 and lado1 == lado3 and lado2==lado3">
+                        <then>
+                            <output expression="&quot;Equilatero&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="lado1 == lado2 or lado1 == lado3 or lado2==lado3">
+                                <then>
+                                    <output expression="&quot;Isosceles&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Escaleno&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

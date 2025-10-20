@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio1"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-23 08:41:42 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIwOyIwMjoyNjo0MCAiOzIyMDA="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIwOyIwMjoyOTo0OCAiOzE7MjMxOQ=="/>
+        <attribute name="edited" value="REFNMTtQQzsyMDI1LTA5LTIzOyIwODo0MTo0MiAiOzI7MTcxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce un numero&quot;" newline="True"/>
+            <input variable="numero"/>
+            <if expression="numero&lt;0">
+                <then>
+                    <assign variable="numero" expression="-numero"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="numero%2==0">
+                <then>
+                    <output expression="&quot;Par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Impar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

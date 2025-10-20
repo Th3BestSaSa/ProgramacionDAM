@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="REjercicio7"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-24 10:54:36 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNDozODo0MiAiOzIyMTA="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTA5LTIzOyIwNDo0ODo0NyAiOzE7MjMyNA=="/>
+        <attribute name="edited" value="REFNMTtQQzsyMDI1LTA5LTI0OyIxMDo1NDozNiAiOzE7MTcxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="caracter" type="String" array="False" size=""/>
+            <output expression="&quot;Introduce un caracter&quot;" newline="True"/>
+            <input variable="caracter"/>
+            <if expression="caracter != &quot;A&quot; and caracter !=&quot;E&quot; and caracter != &quot;I&quot; and caracter !=&quot;O&quot; and caracter !=&quot;U&quot;">
+                <then>
+                    <output expression="&quot;No es una vocal &quot; &amp; caracter" newline="True"/>
+                </then>
+                <else>
+                    <if expression="caracter == &quot;A&quot;">
+                        <then/>
+                        <else>
+                            <if expression="caracter ==&quot;E&quot;">
+                                <then/>
+                                <else>
+                                    <if expression="caracter == &quot;I&quot;">
+                                        <then/>
+                                        <else>
+                                            <if expression="caracter ==&quot;O&quot;">
+                                                <then/>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="&quot;Es la vocal &quot; &amp; caracter" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ejercicio1R2"/>
+        <attribute name="authors" value="cgand"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-06 07:40:45 "/>
+        <attribute name="created" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA2OyIwNzoyNToxNyAiOzIyMDQ="/>
+        <attribute name="edited" value="Y2dhbmQ7Q0VMSUFIUDsyMDI1LTEwLTA2OyIwNzo0MDo0NSAiOzM7MjMxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, auxiliar, contador" type="Integer" array="False" size=""/>
+            <assign variable="contador" expression="10"/>
+            <do expression="contador&lt;10">
+                <assign variable="contador" expression="contador-1"/>
+                <output expression="&quot;Introduce el numero&quot;" newline="True"/>
+                <input variable="numero"/>
+                <assign variable="auxiliar" expression="numero"/>
+                <if expression="auxiliar&gt;0">
+                    <then>
+                        <output expression="&quot;Es positivo&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="auxiliar=0">
+                            <then>
+                                <output expression="&quot;Es 0&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Es negativo&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>
