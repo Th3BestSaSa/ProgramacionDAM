@@ -1,0 +1,35 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Ejercicio4Modulos {
+	private static final int MAXIMO = 100;
+	private static Scanner teclado = new Scanner(System.in);
+	  public static void main(String[] args) {
+	  	int numeroScreto, intentos=0;
+	  	Random serieAleatoria=new Random();
+		
+	  	numeroScreto=serieAleatoria.nextInt(MAXIMO) + 1;
+	    numeroRandom(numeroScreto, intentos);
+	    
+	    System.out.println("El numero secreto es " + numeroScreto);
+	    
+	  }
+	private static void numeroRandom(int numeroScreto, int intentos) {
+		int numero;
+		do{
+	    System.out.println("Introduce el numero secreto");
+	    numero=Integer.parseInt(teclado.nextLine());
+	     if (numero<0 || numero>100) {
+			System.out.println("Numero incorecto");
+		}
+	    if (intentos==5) {
+	    	System.out.println("Numero de intentos superado");
+		}
+	    if (numero == numeroScreto) {
+			 System.out.println("Has ganado");
+		}
+	      
+	    intentos++;
+	    }while(numero != numeroScreto && intentos<=5);
+	}
+}
