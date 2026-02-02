@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Principal {
+	private static Scanner teclado = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		Producto producto1;
+		Producto producto2;
+		Producto producto3;
+
+		try {
+			Categoria categoria1=new Categoria("Alimentacion", 15);
+			Categoria categoria2=new Categoria("Limpieza", 18);
+			producto1 = crearProducto("Producto 1", categoria1);
+			producto2 = crearProducto("Producto 2", categoria1);
+			producto3 = crearProducto("Producto 3", categoria2);
+			System.out.println("El precio con IVA del producto 1 es " + producto1.precioConIva());
+			System.out.println("El precio con IVA del producto 2 es "+producto2.precioConIva());
+			System.out.println("El precio con IVA del producto 3 es "+producto3.precioConIva());
+
+		} catch (VentasException e) {
+			
+			System.out.println(e.getMessage());
+		}
+		
+		
+		
+		
+		
+
+	}
+
+	private static Producto crearProducto(String msg, Categoria categoria) throws VentasException {
+		Producto productoCreado = null;
+		boolean error;
+		double precio;
+		String descripcion;
+
+		do {
+			error = false;
+			try {
+				System.out.println(msg);
+				System.out.println("Descripcion: ");
+
+				descripcion = teclado.nextLine().toString();
+				System.out.println("Precio");
+				precio = Double.parseDouble(teclado.nextLine());
+
+				productoCreado = new Producto(descripcion, precio, categoria);
+
+			}
+
+			catch (NumberFormatException e) {
+				System.out
+						.println("Dato incorrecto. Introduzca un numero");
+				error = true;
+
+			}
+		} while (error);
+
+		return productoCreado;
+
+	}
+
+}
